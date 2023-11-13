@@ -1,0 +1,33 @@
+import = [ "~/.config/alacritty/colors.toml" ]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 10
+
+[font.bold]
+style = "Bold"
+
+[font.bold_italic]
+style = "Bold Italic"
+
+[font.italic]
+style = "Regular Italic"
+
+[font.normal]
+family = "MesloLGS NF"
+style = "Regular"
+
+[window]
+decorations = "None"
+dynamic_padding = true 
+opacity = 0.9
+startup_mode = "Windowed"
+
+[window.padding]
+y = 10
+
+[cursor]
+  [cursor.style]
+    shape = "Block"
