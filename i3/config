@@ -226,6 +226,9 @@ exec_always xinput set-prop "SYNA3602:00 0911:5288 Touchpad" "libinput Scrolling
 # Numlock on by default
 exec_always numlockx on
 
+# clipboard
+exec_always greenclip daemon
+
 # Sxhkd - keyboard shortcuts
 exec_always sxhkd
 
