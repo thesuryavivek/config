@@ -3,7 +3,7 @@ configuration {
   display-window: "Windows:";
   drun-display-format: "{icon} {name}";
   font: "Cascadia code 18";
-  modi: "window,run,drun,keys";
+  modi: "window,run,drun,keys,filebrowser";
   show-icons: true;
 }
 

@@ -1,2 +1,8 @@
 alt + space
 	rofi -show drun
+
+alt + b 
+	rofi-bluetooth
+
+alt + w 
+	rofi-wifi-menu

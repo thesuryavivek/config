@@ -33,4 +33,3 @@ o.completeopt = "menu,menuone,noselect"
 vim.cmd.colorscheme("catppuccin")
 
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#181825", fg = "#cdd6f4" })
--- vim.api.nvim_set_hl(0, "CursorLine", { underline = true })
