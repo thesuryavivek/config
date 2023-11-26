@@ -29,6 +29,7 @@ o.iskeyword:append("-")
 
 o.termguicolors = true
 o.completeopt = "menu,menuone,noselect"
+o.guicursor = ""
 
 vim.cmd.colorscheme("catppuccin")
 
