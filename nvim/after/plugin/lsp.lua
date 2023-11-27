@@ -4,6 +4,7 @@ local lang_servers = {
   "astro",
   "emmet_ls",
   "prismals",
+  "tailwindcss",
 }
 
 -- mason
