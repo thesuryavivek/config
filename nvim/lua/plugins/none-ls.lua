@@ -1,5 +1,5 @@
 return {
-  "jose-elias-alvarez/null-ls.nvim",
+  "nvimtools/none-ls.nvim",
 
   config = function()
     -- code
@@ -20,9 +20,9 @@ return {
         }),                     -- js/ts formatter
         formatting.stylua,      -- lua formatter
         diagnostics.eslint_d.with({ -- js/ts linter
-          -- only enable eslint if root has .eslintrc.js
+          -- only enable eslint if root has .eslintrc.json
           condition = function(utils)
-            return utils.root_has_file(".eslintrc.js")
+            return utils.root_has_file(".eslintrc.json")
           end,
         }),
       },

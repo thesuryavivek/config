@@ -3,8 +3,9 @@ return {
   event = "VeryLazy",
   opts = {
     sections = {
+      lualine_a = { "mode" },
       lualine_b = { "branch" },
-      lualine_c = { "buffers" },
+      lualine_c = { "filename" },
       lualine_x = { "diff", "diagnostics" },
       lualine_y = { "filetype" },
       lualine_z = { "location" },
