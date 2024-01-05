@@ -196,7 +196,7 @@ bindsym $mod+r mode "resize"
 
 # Remove border outline
 for_window [class="^.*"] border pixel 0
-gaps inner 10
+gaps inner 6
 # gaps outer 2
 
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -221,7 +221,7 @@ bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 exec_always xinput set-prop "SYNA3602:00 0911:5288 Touchpad" "libinput Tapping Enabled" 1
 exec_always xinput set-prop "SYNA3602:00 0911:5288 Touchpad" "libinput Natural Scrolling Enabled" 1
-exec_always xinput set-prop "SYNA3602:00 0911:5288 Touchpad" "libinput Scrolling Pixel Distance" 50
+exec_always xinput set-prop "SYNA3602:00 0911:5288 Touchpad" "libinput Scrolling Pixel Distance" 100 
 
 # Numlock on by default
 exec_always numlockx on
