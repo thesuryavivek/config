@@ -221,7 +221,7 @@ bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
 
 exec_always xinput set-prop "SYNA3602:00 0911:5288 Touchpad" "libinput Tapping Enabled" 1
 exec_always xinput set-prop "SYNA3602:00 0911:5288 Touchpad" "libinput Natural Scrolling Enabled" 1
-exec_always xinput set-prop "SYNA3602:00 0911:5288 Touchpad" "libinput Scrolling Pixel Distance" 100 
+exec_always xinput set-prop "SYNA3602:00 0911:5288 Touchpad" "libinput Scrolling Pixel Distance" 50
 
 # Numlock on by default
 exec_always numlockx on
