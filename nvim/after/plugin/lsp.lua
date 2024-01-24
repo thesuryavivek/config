@@ -5,6 +5,7 @@ local lang_servers = {
   "emmet_ls",
   "prismals",
   "tailwindcss",
+  "angularls",
 }
 
 -- mason
