@@ -26,6 +26,9 @@ return {
 				"yaml",
 			},
 			auto_install = true,
+      sync_install = true,
+      ignore_install = {},
+      modules = {}
 		})
 	end,
 }

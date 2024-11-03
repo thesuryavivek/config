@@ -37,6 +37,9 @@ map("n", "<leader>fg", builtin.live_grep, {})
 map("n", "<leader>fb", builtin.buffers, {})
 map("n", "<leader>fh", builtin.help_tags, {})
 
+-- formatting
+map("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end, {})
+
 -- Oil.nvim
 map("n", "-", require("oil").open, { desc = "Open parent dir" })
 

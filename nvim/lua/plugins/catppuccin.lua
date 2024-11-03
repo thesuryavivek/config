@@ -11,7 +11,7 @@ return {
         return {
           LineNr = { fg = mocha.text },
           NvimTreeNormal = { bg = mocha.none },
-          CursorLine = { bg = mocha.base },
+          CursorLine = { bg = mocha.crust },
         }
       end,
     },

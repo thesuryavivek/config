@@ -1,12 +1,14 @@
 return {
   "nvimtools/none-ls.nvim",
+  dependencies = {
+    "nvimtools/none-ls-extras.nvim",
+  },
 
   config = function()
     -- code
     local null_ls = require("null-ls")
 
     local formatting = null_ls.builtins.formatting
-    local diagnostics = null_ls.builtins.diagnostics
 
     -- to setup format on save
     local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
@@ -17,9 +19,9 @@ return {
         --  "formatting.prettier.with({disabled_filetypes = {}})" (see null-ls docs)
         formatting.prettierd.with({
           extra_filetypes = { "astro", "prisma" },
-        }),                     -- js/ts formatter
-        formatting.stylua,      -- lua formatter
-        diagnostics.eslint_d.with({ -- js/ts linter
+        }),                                        -- js/ts formatter
+        formatting.stylua,                         -- lua formatter
+        require("none-ls.diagnostics.eslint_d").with({ -- js/ts linter
           -- only enable eslint if root has .eslintrc.json
           condition = function(utils)
             return utils.root_has_file(".eslintrc.json")
@@ -35,9 +37,7 @@ return {
             group = augroup,
             buffer = bufnr,
             callback = function()
-              vim.lsp.buf.format({
-                async = false,
-              })
+              -- vim.lsp.buf.formatting_sync()
             end,
           })
         end
