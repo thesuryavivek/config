@@ -1,12 +1,12 @@
 return {
   "hrsh7th/nvim-cmp", -- Autocompletion plugin
-
   event = "InsertEnter",
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",   -- LSP source for nvim-cmp
     "hrsh7th/cmp-buffer",     -- LSP source for nvim-cmp
     "hrsh7th/cmp-path",       -- LSP source for nvim-cmp
     "saadparwaiz1/cmp_luasnip", -- Snippets source for nvim-cmp
+    "onsails/lspkind.nvim",
   },
 
   config = function()
@@ -34,10 +34,9 @@ return {
         ["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
       }),
       sources = cmp.config.sources({
-        -- { name = "nvim_lsp" },
+        { name = "nvim_lsp" },
         { name = "luasnip" }, -- For luasnip users.
         { name = "path" }, -- For luasnip users.
-      }, {
         { name = "buffer" },
       }),
     })
