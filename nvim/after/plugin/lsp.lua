@@ -19,46 +19,48 @@ mason_lspconfig.setup({
 })
 
 -- Autocompletions
-local cmp_nvim_lsp = require("cmp_nvim_lsp")
-
-local capabilities = cmp_nvim_lsp.default_capabilities()
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- lspconfig
-local lspconfig = require("lspconfig")
+-- local lspconfig = require("lspconfig")
 
-local lua_lsp_settings = {
-  capabilities = capabilities,
-  settings = {
-    Lua = {
-      runtime = {
-        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
-        version = "LuaJIT",
-      },
-      diagnostics = {
-        -- Get the language server to recognize the `vim` global
-        globals = { "vim" },
-      },
-      workspace = {
-        -- Make the server aware of Neovim runtime files
-        library = vim.api.nvim_get_runtime_file("", true),
-      },
-      -- Do not send telemetry data containing a randomized but unique identifier
-      telemetry = {
-        enable = false,
-      },
-    },
-  },
+-- local lua_lsp_settings = {
+--   capabilities = capabilities,
+--   settings = {
+--     Lua = {
+--       runtime = {
+--         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+--         version = "LuaJIT",
+--       },
+--       diagnostics = {
+--         -- Get the language server to recognize the `vim` global
+--         globals = { "vim" },
+--       },
+--       workspace = {
+--         -- Make the server aware of Neovim runtime files
+--         library = vim.api.nvim_get_runtime_file("", true),
+--       },
+--       -- Do not send telemetry data containing a randomized but unique identifier
+--       telemetry = {
+--         enable = false,
+--       },
+--     },
+--   },
+-- }
+
+-- for _, value in pairs(lang_servers) do
+--   if value == "lua_ls" then
+--     lspconfig.lua_ls.setup(lua_lsp_settings)
+--   else
+--     lspconfig[value].setup({
+--       capabilities = capabilities,
+--     })
+--   end
+-- end
+
+require('lspconfig').gopls.setup {
+  capabilities = capabilities
 }
-
-for _, value in pairs(lang_servers) do
-  if value == "lua_ls" then
-    lspconfig.lua_ls.setup(lua_lsp_settings)
-  else
-    lspconfig[value].setup({
-      capabilities = capabilities,
-    })
-  end
-end
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
